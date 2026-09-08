@@ -1,0 +1,53 @@
+# ============================================
+# Flint 2 Network Project - Git Ignore Rules
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary / backup files
+*.tmp
+*.temp
+*.bak
+*.log
+*~
+
+# Environment / secret files
+.env
+.env.*
+*.secret
+*.secrets
+
+# Cryptographic keys and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Raw router backups / configuration exports
+router-backups/
+config-export/
+raw-configs/
+backups/
+
+# WireGuard / VPN sensitive material
+wireguard-private/
+vpn-private/
+
+# Private / unsanitized project material
+private/
+raw/
+originals/
+unsanitized/
