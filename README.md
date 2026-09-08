@@ -158,7 +158,7 @@ The completed build of this network architecture was validated through DHCP/netw
 │   ├── samba4.conf
 │   └── wireless.conf
 │
-├── command-output/
+├── command output/
 │   ├── devstatus-br-lan.txt
 │   ├── ip-addr.txt
 │   ├── ip-route.txt
