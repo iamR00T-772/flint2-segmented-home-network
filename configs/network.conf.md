@@ -1,0 +1,310 @@
+# Sanitized excerpt from /etc/config/network
+# Sensitive identifiers have been intentionally redacted.
+
+config interface 'loopback'
+	option device 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix '<IPV6_ADDRESS>'
+
+config device
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'lan1'
+	list ports 'lan2'
+	list ports 'lan3'
+	list ports 'lan4'
+	list ports 'lan5'
+	option macaddr '<MAC ADDRESS>'
+
+config device
+	option name 'lan1'
+	option macaddr '<MAC ADDRESS>'
+
+config device
+	option name 'lan2'
+	option macaddr '<MAC ADDRESS>'
+
+config device
+	option name 'lan3'
+	option macaddr '<MAC ADDRESS>'
+
+config device
+	option name 'lan4'
+	option macaddr '<MAC ADDRESS>'
+
+config device
+	option name 'lan5'
+	option macaddr '<MAC ADDRESS>'
+
+config interface 'lan'
+	option proto 'static'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+	option isolate '0'
+	option ipaddr '10.10.10.1'
+	option device 'br-lan.10'
+
+config device
+	option name 'eth1'
+	option macaddr '<MAC ADDRESS>'
+
+config interface 'wan'
+	option device 'eth1'
+	option proto 'dhcp'
+	option force_link '0'
+	option ipv6 '0'
+	option classlessroute '0'
+	option metric '10'
+
+config interface 'wan6'
+	option proto 'dhcpv6'
+	option device '@wan'
+	option disabled '1'
+
+config interface 'guest'
+	option force_link '1'
+	option device 'br-guest'
+	option proto 'static'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+	option multicast_querier '1'
+	option igmp_snooping '0'
+	option isolate '0'
+	option disabled '0'
+	option ipaddr '10.10.60.1'
+
+config device
+	option name 'br-guest'
+	option type 'bridge'
+	option bridge_empty '1'
+
+config interface 'iot'
+	option force_link '1'
+	option device 'br-iot'
+	option proto 'static'
+	option netmask '255.255.255.0'
+	option delegate '0'
+	option multicast_querier '1'
+	option igmp_snooping '0'
+	option isolate '0'
+	option disabled '0'
+	option ipaddr '10.10.50.1'
+
+config device
+	option name 'br-iot'
+	option type 'bridge'
+	option bridge_empty '1'
+
+config rule 'policy_relay_lo_rt_lan'
+	option lookup '16800'
+	option in 'loopback'
+	option priority '1'
+
+config interface 'tethering6'
+	option device '@tethering'
+	option proto 'dhcpv6'
+	option disabled '1'
+
+config interface 'wwan6'
+	option device '@wwan'
+	option proto 'dhcpv6'
+	option disabled '1'
+
+config interface 'wwan'
+	option proto 'dhcp'
+	option classlessroute '0'
+	option metric '20'
+
+config interface 'secondwan'
+	option ipv6 '0'
+	option proto 'dhcp'
+	option metric '15'
+	option force_link '0'
+	option classlessroute '0'
+
+config interface 'secondwan6'
+	option proto 'dhcpv6'
+	option device '@secondwan'
+	option disabled '1'
+
+config interface 'modem_1_2_s1_6'
+	option proto 'dhcpv6'
+	option disabled '1'
+	option device '@modem_1_2_s1'
+
+config interface 'modem_2_1_s1_6'
+	option proto 'dhcpv6'
+	option disabled '1'
+	option device '@modem_2_1_s1'
+
+config bridge-vlan
+	option device 'br-lan'
+	option vlan '10'
+	list ports 'lan1:u*'
+
+config bridge-vlan
+	option device 'br-lan'
+	option vlan '20'
+	list ports 'lan2:u*'
+
+config bridge-vlan
+	option device 'br-lan'
+	option vlan '30'
+	list ports 'lan3:u*'
+
+config bridge-vlan
+	option device 'br-lan'
+	option vlan '40'
+	list ports 'lan4:u*'
+
+config interface 'gaming'
+	option proto 'static'
+	option device 'br-lan.20'
+	option ipaddr '10.10.20.1'
+	option netmask '255.255.255.0'
+
+config interface 'siem'
+	option proto 'static'
+	option device 'br-lan.30'
+	option ipaddr '10.10.30.1'
+	option netmask '255.255.255.0'
+
+config interface 'tv'
+	option proto 'static'
+	option device 'br-lan.40'
+	option ipaddr '10.10.40.1'
+	option netmask '255.255.255.0'
+
+config interface 'wgclient1'
+	option proto 'wgclient'
+	option config '<WG_PEER_1>'
+	option ip4table '1001'
+	option gl_vpn_instance '1'
+	option ip6table '1001'
+	option disabled '0'
+
+config interface 'wgclient2'
+	option proto 'wgclient'
+	option config '<WG_PEER_2>'
+	option ip4table '1002'
+	option gl_vpn_instance '1'
+	option ip6table '1002'
+	option disabled '1'
+
+config interface 'wgclient3'
+	option proto 'wgclient'
+	option config '<WG_PEER_3>'
+	option ip4table '1003'
+	option gl_vpn_instance '1'
+	option ip6table '1003'
+	option disabled '1'
+
+config interface 'wgclient4'
+	option proto 'wgclient'
+	option config '<WG_PEER_4>'
+	option ip4table '1004'
+	option gl_vpn_instance '1'
+	option ip6table '1004'
+	option disabled '1'
+
+config interface 'wgclient5'
+	option proto 'wgclient'
+	option config '<WG_PEER_5>'
+	option ip4table '1005'
+	option gl_vpn_instance '1'
+	option ip6table '1005'
+	option disabled '1'
+
+config rule 'rt_wgclient1'
+	option mark '0x1000/0xf000'
+	option lookup '1001'
+	option priority '6000'
+
+config route 'wgclient1_blackhole'
+	option target '0.0.0.0'
+	option netmask '0.0.0.0'
+	option interface 'loopback'
+	option metric '254'
+	option type 'blackhole'
+	option table '1001'
+
+config rule6 'rt_wgclient1_6'
+	option mark '0x1000/0xf000'
+	option lookup '1001'
+	option priority '6000'
+
+config route6 'wgclient1_blackhole_6'
+	option target '::0/0'
+	option interface 'loopback'
+	option metric '25400'
+	option type 'blackhole'
+	option table '1001'
+
+config rule 'novpn_to_main'
+	option gl_vpn_rules '1'
+	option mark '0x8000/0xf000'
+	option priority '6000'
+	option lookup 'main'
+	option disabled '0'
+
+config rule 'vpn_to_main'
+	option gl_vpn_rules '1'
+	option mark '0x0/0xf000'
+	option priority '9000'
+	option lookup 'main'
+	option invert '1'
+	option disabled '0'
+
+config rule 'vpn_leak_block'
+	option gl_vpn_rules '1'
+	option mark '0x0/0xf000'
+	option priority '9910'
+	option action 'blackhole'
+	option invert '1'
+	option disabled '0'
+
+config rule 'vpn_block_ovpnserver_leak'
+	option gl_vpn_rules '1'
+	option in 'ovpnserver'
+	option priority '9920'
+	option action 'blackhole'
+	option disabled '0'
+
+config rule 'vpn_block_wgserver_leak'
+	option gl_vpn_rules '1'
+	option in 'wgserver'
+	option priority '9920'
+	option action 'blackhole'
+	option disabled '0'
+
+config rule 'vpn_block_lan_leak'
+	option gl_vpn_rules '1'
+	option in 'lan'
+	option priority '9920'
+	option action 'blackhole'
+	option disabled '0'
+
+config rule 'vpn_block_guest_leak'
+	option gl_vpn_rules '1'
+	option in 'guest'
+	option priority '9920'
+	option action 'blackhole'
+	option disabled '0'
+
+config rule 'vpn_block_iot_leak'
+	option gl_vpn_rules '1'
+	option in 'iot'
+	option priority '9920'
+	option action 'blackhole'
+	option disabled '0'
+
+config rule 'main_static_net'
+	option gl_vpn_rules '1'
+	option suppress_prefixlength '0'
+	option priority '800'
+	option lookup '9910'
+	option disabled '0'

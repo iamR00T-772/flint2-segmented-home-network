@@ -1,0 +1,18 @@
+# Sanitized excerpt from /etc/config/samba4
+# Sensitive identifiers have been intentionally redacted.
+
+config samba
+	option workgroup 'WORKGROUP'
+	option charset 'UTF-8'
+	option description 'Samba on OpenWRT'
+	option interface 'loopback lan'
+
+config sambashare
+	option path '<FILEPATH>'
+	option name '<SMB_SHARE_NAME>'
+	option read_only 'no'
+	option guest_ok 'no'
+	option users '<USER>-user'
+	option write_list '<USER>-w'
+	option read_list '<USER>-r'
+	option share_id '<USER>'

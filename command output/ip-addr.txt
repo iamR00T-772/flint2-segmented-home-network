@@ -1,0 +1,84 @@
+# Sanitized output: ip addr
+# Captured from GL.iNet Flint 2 (GL-MT6000)
+# Sensitive identifiers have been intentionally redacted.
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+    inet <WAN_IP_ADDRESS>/24 brd <WAN_BROADCAST_ADDRESS> scope global eth1
+       valid_lft forever preferred_lft forever
+4: lan2@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master br-lan state LOWERLAYERDOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+5: lan3@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-lan state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+6: lan4@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master br-lan state LOWERLAYERDOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+7: lan5@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master br-lan state LOWERLAYERDOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+8: lan1@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master br-lan state LOWERLAYERDOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+9: ra0: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+10: br-guest: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc htb state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+    inet 10.10.60.1/24 brd 10.10.60.255 scope global br-guest
+       valid_lft forever preferred_lft forever
+11: br-iot: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+    inet 10.10.50.1/24 brd 10.10.50.255 scope global br-iot
+       valid_lft forever preferred_lft forever
+12: br-lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc htb state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+13: br-lan.10@br-lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+    inet 10.10.10.1/24 brd 10.10.10.255 scope global br-lan.10
+       valid_lft forever preferred_lft forever
+14: br-lan.20@br-lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+    inet 10.10.20.1/24 brd 10.10.20.255 scope global br-lan.20
+       valid_lft forever preferred_lft forever
+15: br-lan.30@br-lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+    inet 10.10.30.1/24 brd 10.10.30.255 scope global br-lan.30
+       valid_lft forever preferred_lft forever
+16: br-lan.40@br-lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+    inet 10.10.40.1/24 brd 10.10.40.255 scope global br-lan.40
+       valid_lft forever preferred_lft forever
+21: ra1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br-guest state UNKNOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+22: ra2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br-iot state UNKNOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+23: rax0: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+24: rax1: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+25: rax2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+26: rax3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br-lan state UNKNOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+27: rax4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br-lan state UNKNOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+28: rax5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br-lan state UNKNOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+29: rax6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br-lan state UNKNOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+30: apcli0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+31: apclix0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+36: br-lan-ifb: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc htb state UNKNOWN group default qlen 32
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+37: br-guest-ifb: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc htb state UNKNOWN group default qlen 32
+    link/ether <MAC_ADDRESS> brd ff:ff:ff:ff:ff:ff
+42: wgclient1: <POINTOPOINT,NOARP,UP,LOWER_UP> mtu 1420 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/none 
+    inet 10.5.0.2/16 brd 10.5.255.255 scope global wgclient1
+       valid_lft forever preferred_lft forever

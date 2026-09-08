@@ -1,0 +1,81 @@
+# Sanitized output: devstatus br-lan
+# Captured from GL.iNet Flint 2 (GL-MT6000)
+# Sensitive identifiers have been intentionally redacted.
+
+{
+	"external": false,
+	"present": true,
+	"type": "bridge",
+	"up": true,
+	"carrier": true,
+	"auth_status": false,
+	"bridge-members": [
+		"lan1",
+		"lan2",
+		"lan3",
+		"lan4",
+		"lan5",
+		"rax3",
+		"rax4",
+		"rax5",
+		"rax6"
+	],
+	"bridge-vlans": [
+		{
+			"id": 10,
+			"local": true,
+			"ports": [
+				"lan1",
+				"rax3"
+			]
+		},
+		{
+			"id": 20,
+			"local": true,
+			"ports": [
+				"lan2",
+				"rax4"
+			]
+		},
+		{
+			"id": 30,
+			"local": true,
+			"ports": [
+				"lan3",
+				"rax5"
+			]
+		},
+		{
+			"id": 40,
+			"local": true,
+			"ports": [
+				"lan4",
+				"rax6"
+			]
+		}
+	],
+	"mtu": 1500,
+	"mtu6": 1500,
+	"macaddr": "<MAC_ADDRESS>",
+	"txqueuelen": 1000,
+	"ipv6": false,
+	"ip6segmentrouting": false,
+	"promisc": false,
+	"rpfilter": 0,
+	"acceptlocal": false,
+	"igmpversion": 0,
+	"mldversion": 0,
+	"neigh4reachabletime": 30000,
+	"neigh6reachabletime": 30000,
+	"neigh4gcstaletime": 60,
+	"neigh6gcstaletime": 60,
+	"neigh4locktime": 100,
+	"dadtransmits": 1,
+	"multicast": true,
+	"sendredirects": true,
+	"drop_v4_unicast_in_l2_multicast": false,
+	"drop_v6_unicast_in_l2_multicast": false,
+	"drop_gratuitous_arp": false,
+	"drop_unsolicited_na": false,
+	"arp_accept": false,
+}
